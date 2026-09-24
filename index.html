@@ -3,160 +3,178 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#1638A6">
-<meta name="description" content="Jaguaribe Energia · energia solar compartilhada no Ceará. Você fica com uma parte da usina e paga menos na conta de luz. Site de demonstração.">
+<meta name="theme-color" content="#0C0F14">
+<meta name="description" content="Jaguaribe Energia · energia solar compartilhada para residências e empresas no Ceará. Site de demonstração.">
 <title>Jaguaribe Energia</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  color-scheme: light;
-  --cobalto:#1638A6;
-  --cobalto-2:#1D44C4;
-  --celula:#0E1C57;
-  --sol:#FFC83D;
-  --papel:#F6F7FB;
-  --branco:#FFFFFF;
-  --tinta:#0E1433;
-  --tinta-2:#505A7A;
-  --linha:#D8DCEA;
-  --verde:#1E8E5A;
-  --texto:"Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --mono:"DM Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  color-scheme: dark;
+  --fundo:#0C0F14;
+  --sup:#12161D;
+  --sup-2:#181D26;
+  --linha:#252C38;
+  --texto:#E6E9EE;
+  --texto-2:#A3ACBB;
+  --texto-3:#737D8F;
+  --acento:#D9A441;
+  --barra:#7C93BA;
+  --barra-ativa:#A9BCDB;
+  --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-html{scroll-padding-top:70px;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--papel);color:var(--tinta);font:400 17px/1.6 var(--texto);-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
-a{color:var(--cobalto)}
+html{scroll-padding-top:68px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--fundo);color:var(--texto);font:400 16.5px/1.65 var(--sans);-webkit-font-smoothing:antialiased;-webkit-tap-highlight-color:transparent}
+a{color:var(--texto)}
 button,input{font:inherit;touch-action:manipulation}
 h1,h2,h3,p,ol,ul,dl,dd,figure{margin:0}
-.wrap{max-width:1080px;margin-inline:auto;padding-inline:16px}
-:focus-visible{outline:3px solid var(--sol);outline-offset:2px}
-.demo{background:var(--celula);color:#AEB9E6;font:400 .74rem/1.35 var(--mono);text-align:center;padding:6px 16px}
+.wrap{max-width:1100px;margin-inline:auto;padding-inline:16px}
+:focus-visible{outline:2px solid var(--acento);outline-offset:3px}
+.demo{background:#07090C;color:var(--texto-3);font:400 .72rem/1.35 var(--mono);text-align:center;padding:6px 16px;border-bottom:1px solid var(--linha)}
 .mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
-.largo{font-stretch:125%}
 
 /* topo */
-.topo{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--cobalto);color:#fff}
-.topo .wrap{display:flex;align-items:center;gap:14px;height:60px}
-.marca{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font:800 1.05rem/1 var(--texto);font-stretch:125%;letter-spacing:.01em;text-transform:uppercase}
-.menu{display:none;gap:22px;margin-left:auto;font-size:.95rem}
-.menu a{color:#D4DCFA;text-decoration:none}
-.menu a:hover{color:#fff}
-.bt{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 22px;border-radius:999px;border:0;font:700 1rem/1.1 var(--texto);text-decoration:none;cursor:pointer;text-align:center}
+.topo{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(12,15,20,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--linha)}
+.topo .wrap{display:flex;align-items:center;gap:16px;height:60px}
+.marca{display:flex;align-items:center;gap:10px;color:var(--texto);text-decoration:none;font:600 1rem/1 var(--sans);letter-spacing:.01em}
+.marca small{font:400 .72rem/1 var(--mono);color:var(--texto-3);letter-spacing:.04em;margin-left:2px}
+.menu{display:none;gap:26px;margin-left:auto;font-size:.92rem}
+.menu a{color:var(--texto-2);text-decoration:none}
+.menu a:hover{color:var(--texto)}
+.bt{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border-radius:6px;border:1px solid var(--linha);background:transparent;color:var(--texto);font:500 .95rem/1.1 var(--sans);text-decoration:none;cursor:pointer;text-align:center}
+.bt:hover{border-color:var(--texto-3)}
 .bt:active{transform:translateY(1px)}
-.bt-sol{background:var(--sol);color:#231800}
-.bt-sol:hover{background:#FFD466}
-.bt-azul{background:var(--cobalto);color:#fff}
-.bt-topo{margin-left:auto;min-height:40px;padding:0 16px;font-size:.9rem}
-@media (min-width:880px){.menu{display:flex}.bt-topo{margin-left:10px}}
+.bt-claro{background:var(--texto);border-color:var(--texto);color:var(--fundo)}
+.bt-claro:hover{background:#fff;border-color:#fff}
+.bt-topo{margin-left:auto;min-height:38px;padding:0 14px;font-size:.88rem}
+@media (min-width:900px){.menu{display:flex}.bt-topo{margin-left:6px}}
 
-/* abertura: a usina vista de cima */
-.usina{background:var(--cobalto);color:#fff;padding-block:28px 40px;overflow:hidden}
-.usina .wrap{display:grid;gap:24px}
-@media (min-width:900px){.usina .wrap{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:48px}}
-.rotulo{font:400 .78rem/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:#AEBDF5}
-.usina h1{font:800 clamp(2rem,8vw,3.5rem)/1.02 var(--texto);font-stretch:125%;letter-spacing:-.01em;margin-top:10px;text-wrap:balance}
-.usina h1 span{color:var(--sol)}
-.usina .sub{margin-top:14px;color:#DCE3FB;max-width:48ch;font-size:1.05rem}
-.planta{background:#0F2A86;border-radius:14px;padding:14px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+/* abertura */
+.abertura{padding-block:36px 44px;border-bottom:1px solid var(--linha)}
+.abertura .wrap{display:grid;gap:30px}
+@media (min-width:940px){.abertura .wrap{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:56px;align-items:start}}
+.sobre{font:400 .74rem/1.4 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--texto-3)}
+h1{font:300 clamp(2rem,7.6vw,3.3rem)/1.08 var(--sans);letter-spacing:-.025em;margin-top:14px;text-wrap:balance}
+h1 b{font-weight:500}
+.intro{margin-top:16px;color:var(--texto-2);max-width:50ch;font-size:1.02rem}
+.fatos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:26px;border-top:1px solid var(--linha)}
+.fatos div{padding:14px 12px 0 0}
+.fatos div + div{padding-left:12px;border-left:1px solid var(--linha)}
+.fatos dt{font:400 .7rem/1.3 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--texto-3)}
+.fatos dd{font-size:.95rem;margin-top:4px;line-height:1.35}
+.acoes{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+
+/* a usina */
+.planta{background:var(--sup);border:1px solid var(--linha);border-radius:8px;overflow:hidden}
+.planta-cab{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;padding:10px 14px;border-bottom:1px solid var(--linha);font:400 .72rem/1.4 var(--mono);color:var(--texto-3);letter-spacing:.03em}
+.planta-cab b{font-weight:500;color:var(--texto-2)}
 .planta svg{display:block;width:100%;height:auto}
-.planta figcaption{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:10px;font:400 .76rem/1.3 var(--mono);color:#AEBDF5}
-.mod{fill:var(--celula);stroke:#3552C2;stroke-width:.8;transition:fill .25s ease}
-.mod.sua{fill:var(--sol);stroke:#FFE39A}
-.cel{stroke:rgba(255,255,255,.1);stroke-width:.6;pointer-events:none}
-.mod.sua + .cel{stroke:rgba(35,24,0,.18)}
-.controle{margin-top:14px;display:grid;gap:10px}
-.controle label{font-weight:600;font-size:.95rem}
-.linha-valor{display:flex;align-items:center;gap:10px}
-.linha-valor .rs{font:400 1.2rem/1 var(--mono);color:#AEBDF5}
-.linha-valor input[type=number]{flex:1;min-width:0;background:transparent;border:0;border-bottom:2px solid rgba(255,255,255,.5);color:#fff;font:500 2.2rem/1.1 var(--mono);padding:2px 0;-moz-appearance:textfield}
-.linha-valor input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
-.linha-valor input[type=number]:focus{outline:none;border-bottom-color:var(--sol)}
-input[type=range]{width:100%;accent-color:var(--sol);height:28px}
-.leitura{font-size:1.08rem;line-height:1.5;color:#E6EBFD}
-.leitura b{font:500 1.05em/1 var(--mono);color:var(--sol);white-space:nowrap}
-.leitura .extra{display:block;margin-top:6px;font-size:.85rem;color:#AEBDF5}
-.usina .bt{justify-self:start;margin-top:6px}
+.legenda{display:flex;flex-wrap:wrap;gap:6px 18px;padding:10px 14px;border-top:1px solid var(--linha);font-size:.8rem;color:var(--texto-2)}
+.legenda span{display:inline-flex;align-items:center;gap:8px}
+.legenda i{width:12px;height:16px;border-radius:1px;background:#142033;border:1px solid #8F98A5}
+.legenda i.sua{background:rgba(217,164,65,.3);border-color:var(--acento)}
+.mod-sel{fill:var(--acento);fill-opacity:0;stroke:var(--acento);stroke-opacity:0;stroke-width:1.4;transition:fill-opacity .3s ease,stroke-opacity .3s ease;pointer-events:none}
+.mod-sel.sua{fill-opacity:.26;stroke-opacity:1}
+@media (prefers-reduced-motion:reduce){.mod-sel{transition:none}}
+
+/* simulador */
+.sim{margin-top:14px;background:var(--sup);border:1px solid var(--linha);border-radius:8px;padding:16px}
+.sim label{display:block;font-size:.9rem;color:var(--texto-2)}
+.campo{display:flex;align-items:baseline;gap:8px;margin-top:6px}
+.campo span{font:400 1.1rem/1 var(--mono);color:var(--texto-3)}
+.campo input{flex:1;min-width:0;background:transparent;border:0;border-bottom:1px solid var(--texto-3);color:var(--texto);font:400 2rem/1.15 var(--mono);padding:2px 0;-moz-appearance:textfield}
+.campo input::-webkit-inner-spin-button{-webkit-appearance:none}
+.campo input:focus{outline:none;border-bottom-color:var(--acento)}
+input[type=range]{width:100%;margin-top:12px;accent-color:var(--acento);height:24px}
+.resultado{margin-top:10px;border-top:1px solid var(--linha)}
+.resultado div{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:10px 0;border-bottom:1px solid var(--linha)}
+.resultado dt{color:var(--texto-2);font-size:.92rem}
+.resultado dd{font:400 1rem/1.2 var(--mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.resultado .forte dd{color:var(--acento);font-weight:500}
+.sim .obs{margin-top:10px;font-size:.8rem;color:var(--texto-3)}
+.sim .bt{width:100%;margin-top:14px}
 
 /* seções */
-.secao{padding-block:48px}
-.secao + .secao{border-top:1px solid var(--linha)}
-.secao h2{font:800 clamp(1.6rem,6vw,2.4rem)/1.06 var(--texto);font-stretch:125%;letter-spacing:-.01em;max-width:24ch;text-wrap:balance}
-.secao .lead{margin-top:10px;color:var(--tinta-2);max-width:60ch}
+.secao{padding-block:52px;border-bottom:1px solid var(--linha)}
+.cab-sec{display:grid;gap:10px;max-width:680px}
+.cab-sec .sobre{margin:0}
+h2{font:300 clamp(1.6rem,5.6vw,2.3rem)/1.15 var(--sans);letter-spacing:-.02em;text-wrap:balance}
+.cab-sec p{color:var(--texto-2)}
 
-/* caminho da energia */
-.caminho{list-style:none;padding:0;margin-top:26px;display:grid;gap:0;position:relative}
-@media (min-width:880px){.caminho{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}}
-.caminho li{position:relative;padding:0 0 26px 44px}
-.caminho li::before{content:"";position:absolute;left:14px;top:30px;bottom:0;border-left:2px dashed var(--cobalto);opacity:.45}
-.caminho li:last-child::before{display:none}
-@media (min-width:880px){.caminho li{padding:48px 0 0}.caminho li::before{left:34px;right:-24px;top:15px;bottom:auto;border-left:0;border-top:2px dashed var(--cobalto)}}
-.caminho .no{position:absolute;left:0;top:0;width:30px;height:30px;border-radius:50%;background:var(--cobalto);display:grid;place-items:center}
-.caminho .no svg{width:16px;height:16px}
-.caminho b{display:block;font-size:1.08rem;font-stretch:112%}
-.caminho small{display:block;font:400 .78rem/1.3 var(--mono);color:var(--tinta-2);margin:2px 0 6px}
-.caminho p{color:var(--tinta-2);font-size:.95rem}
+.fluxo{list-style:none;padding:0;margin-top:30px;display:grid;border-top:1px solid var(--linha)}
+@media (min-width:900px){.fluxo{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.fluxo li{padding:18px 0;border-bottom:1px solid var(--linha);display:grid;gap:4px}
+@media (min-width:900px){.fluxo li{padding:20px 24px 4px 0;border-bottom:0}.fluxo li + li{padding-left:24px;border-left:1px solid var(--linha)}}
+.fluxo .onde{font:400 .72rem/1.3 var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--texto-3)}
+.fluxo b{font-weight:500;font-size:1.05rem}
+.fluxo p{color:var(--texto-2);font-size:.95rem}
 
-/* tabela de economia */
-.tabela{margin-top:22px;overflow-x:auto;background:var(--branco);border:1px solid var(--linha);border-radius:14px}
-table{width:100%;border-collapse:collapse;font-size:.95rem}
-th,td{padding:13px 14px;border-bottom:1px solid var(--linha);text-align:left}
-th{font:400 .72rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--tinta-2);background:#FAFBFE}
+.tabela{margin-top:26px;overflow-x:auto;border:1px solid var(--linha);border-radius:8px}
+table{width:100%;border-collapse:collapse;font-size:.94rem}
+th,td{padding:13px 16px;border-bottom:1px solid var(--linha);text-align:left}
+th{font:400 .7rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--texto-3);background:var(--sup)}
+td{background:var(--fundo)}
 td.n,th.n{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
-td.destaque{color:var(--verde);font-weight:500}
 tr:last-child td{border-bottom:0}
-td small{display:block;color:var(--tinta-2);font-size:.82rem}
-.nota{margin-top:10px;font-size:.84rem;color:var(--tinta-2);max-width:72ch}
+.nota{margin-top:12px;font-size:.82rem;color:var(--texto-3);max-width:74ch}
 
-/* gráfico de geração */
-.grafico{margin-top:22px;background:var(--branco);border:1px solid var(--linha);border-radius:14px;padding:16px 14px 10px;position:relative}
-.grafico h3{font-size:1rem;font-weight:700}
-.grafico .unid{font:400 .78rem/1.3 var(--mono);color:var(--tinta-2);margin-top:2px}
-.grafico svg{display:block;width:100%;height:auto;margin-top:10px;overflow:visible}
+/* ficha técnica */
+.ficha{display:grid;gap:0;margin-top:26px;border-top:1px solid var(--linha)}
+@media (min-width:760px){.ficha{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:40px}}
+.ficha div{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid var(--linha)}
+.ficha dt{color:var(--texto-2);font-size:.93rem}
+.ficha dd{font:400 .93rem/1.4 var(--mono);text-align:right}
+
+/* gráfico */
+.grafico{margin-top:26px;background:var(--sup);border:1px solid var(--linha);border-radius:8px;padding:16px 14px 8px;position:relative}
+.grafico h3{font-weight:500;font-size:.98rem}
+.grafico .unid{font:400 .74rem/1.3 var(--mono);color:var(--texto-3);margin-top:2px}
+.grafico svg{display:block;width:100%;height:auto;margin-top:12px;overflow:visible}
 .grafico .grade{stroke:var(--linha);stroke-width:1}
-.grafico .eixo{fill:var(--tinta-2);font:400 11px/1 var(--mono)}
-.grafico .barra{fill:var(--cobalto)}
+.grafico .eixo{fill:var(--texto-3);font:400 11px/1 var(--mono)}
+.grafico .barra{fill:var(--barra)}
 .grafico .alvo{fill:transparent;cursor:pointer}
-.grafico .alvo:hover + .barra,.grafico .ativo .barra{fill:var(--cobalto-2)}
-.dica{position:absolute;pointer-events:none;background:var(--tinta);color:#fff;border-radius:8px;padding:6px 9px;font:400 .8rem/1.35 var(--mono);white-space:nowrap;transform:translate(-50%,-100%);margin-top:-8px}
-.grafico details{margin-top:8px;font-size:.88rem}
-.grafico summary{cursor:pointer;color:var(--cobalto);font-weight:600;padding:6px 0}
-.grafico details table{font-size:.85rem;margin-top:4px}
+.grafico .alvo:hover + .barra,.grafico .ativo .barra{fill:var(--barra-ativa)}
+.dica{position:absolute;pointer-events:none;background:var(--texto);color:var(--fundo);border-radius:4px;padding:5px 8px;font:400 .78rem/1.35 var(--mono);white-space:nowrap;transform:translate(-50%,-100%);margin-top:-8px}
+.grafico details{margin-top:6px;font-size:.86rem}
+.grafico summary{cursor:pointer;color:var(--texto-2);padding:8px 0}
+.grafico details table{font-size:.82rem;margin-bottom:8px}
 .grafico details td,.grafico details th{padding:6px 8px}
 
 /* adesão */
-.adesao{display:grid;gap:22px;margin-top:24px}
-@media (min-width:880px){.adesao{grid-template-columns:1.3fr 1fr;align-items:start}}
-.passos{list-style:none;padding:0;counter-reset:p;display:grid;gap:0}
-.passos li{counter-increment:p;display:grid;grid-template-columns:auto minmax(0,1fr);gap:2px 14px;padding:16px 0;border-top:1px solid var(--linha)}
-.passos li::before{content:counter(p);grid-row:span 2;width:34px;height:34px;border-radius:50%;background:var(--sol);color:#231800;display:grid;place-items:center;font:500 1rem/1 var(--mono)}
-.passos b{font-size:1.05rem}
-.passos p{color:var(--tinta-2);font-size:.95rem}
-.docs{background:var(--branco);border:1px solid var(--linha);border-radius:14px;padding:18px}
-.docs h3{font:400 .76rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--tinta-2)}
+.adesao{display:grid;gap:26px;margin-top:28px}
+@media (min-width:900px){.adesao{grid-template-columns:1.3fr 1fr;align-items:start}}
+.passos{list-style:none;padding:0;counter-reset:p;border-top:1px solid var(--linha)}
+.passos li{counter-increment:p;display:grid;grid-template-columns:34px minmax(0,1fr);gap:2px 12px;padding:16px 0;border-bottom:1px solid var(--linha)}
+.passos li::before{content:counter(p, decimal-leading-zero);grid-row:span 2;font:400 .82rem/1.9 var(--mono);color:var(--acento)}
+.passos b{font-weight:500}
+.passos p{color:var(--texto-2);font-size:.94rem}
+.docs{background:var(--sup);border:1px solid var(--linha);border-radius:8px;padding:18px}
+.docs h3{font:400 .72rem/1.2 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--texto-3)}
 .docs ul{margin-top:10px;padding-left:18px;display:grid;gap:6px}
-.docs p{margin-top:12px;font-size:.9rem;color:var(--tinta-2)}
+.docs p{margin-top:12px;font-size:.88rem;color:var(--texto-2)}
 
 /* dúvidas */
-.faq{margin-top:18px;display:grid;gap:8px}
-.faq details{background:var(--branco);border:1px solid var(--linha);border-radius:12px;padding:0 16px}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:14px;padding:15px 0;font-weight:600}
+.faq{margin-top:22px;border-top:1px solid var(--linha)}
+.faq details{border-bottom:1px solid var(--linha)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:16px;padding:16px 0;font-weight:500}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";font:400 1.4rem/1 var(--mono);color:var(--cobalto);flex:none}
+.faq summary::after{content:"+";font:300 1.3rem/1 var(--mono);color:var(--texto-3);flex:none}
 .faq details[open] summary::after{content:"−"}
-.faq details p{padding-bottom:16px;color:var(--tinta-2);max-width:68ch}
+.faq details p{padding-bottom:18px;color:var(--texto-2);max-width:70ch}
 
 /* rodapé */
-.rodape{background:var(--celula);color:#D4DCFA;padding-block:44px 28px}
-.rodape h2{font:800 clamp(1.6rem,6vw,2.4rem)/1.06 var(--texto);font-stretch:125%;color:#fff;max-width:20ch}
-.rodape dl{display:grid;gap:20px;margin-top:22px}
-@media (min-width:880px){.rodape dl{grid-template-columns:repeat(3,minmax(0,1fr))}}
-.rodape dt{font:400 .72rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#8E9BD6;margin-bottom:6px}
-.rodape .bt{margin-top:8px}
-.rodape .fim{margin-top:34px;padding-top:16px;border-top:1px solid rgba(255,255,255,.12);font:400 .78rem/1.5 var(--mono);color:#8E9BD6}
+.rodape{padding-block:48px 30px}
+.rodape .grade{display:grid;gap:26px;margin-top:26px}
+@media (min-width:900px){.rodape .grade{grid-template-columns:1.2fr 1fr 1fr}}
+.rodape dt{font:400 .7rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--texto-3);margin-bottom:8px}
+.rodape dd{color:var(--texto-2)}
+.rodape .bt{margin-top:12px}
+.legal{margin-top:40px;padding-top:18px;border-top:1px solid var(--linha);font:400 .74rem/1.6 var(--mono);color:var(--texto-3)}
 </style>
 </head>
 <body>
@@ -165,116 +183,161 @@ td small{display:block;color:var(--tinta-2);font-size:.82rem}
 
 <header class="topo"><div class="wrap">
   <a class="marca" href="#inicio" aria-label="Jaguaribe Energia, início">
-    <svg width="28" height="28" viewBox="0 0 28 28" aria-hidden="true"><rect x="1" y="1" width="26" height="26" rx="6" fill="#FFC83D"/><g fill="#0E1C57"><rect x="6" y="7" width="7" height="6" rx="1"/><rect x="15" y="7" width="7" height="6" rx="1"/><rect x="6" y="15" width="7" height="6" rx="1"/><rect x="15" y="15" width="7" height="6" rx="1"/></g></svg>
-    Jaguaribe
+    <svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><rect x=".5" y=".5" width="25" height="25" rx="4" fill="none" stroke="#A3ACBB"/><g fill="#E6E9EE"><rect x="6" y="6" width="6" height="6"/><rect x="14" y="6" width="6" height="6"/><rect x="6" y="14" width="6" height="6"/></g><rect x="14" y="14" width="6" height="6" fill="#D9A441"/></svg>
+    Jaguaribe <small>ENERGIA</small>
   </a>
-  <nav class="menu" aria-label="Seções"><a href="#caminho">Como funciona</a><a href="#economia">Economia</a><a href="#geracao">A usina</a><a href="#duvidas">Dúvidas</a></nav>
-  <a class="bt bt-sol bt-topo" id="zap-topo" target="_blank" rel="noopener">Quero aderir</a>
+  <nav class="menu" aria-label="Seções"><a href="#funcionamento">Funcionamento</a><a href="#economia">Economia</a><a href="#usina">A usina</a><a href="#adesao">Adesão</a><a href="#duvidas">Dúvidas</a></nav>
+  <a class="bt bt-topo" id="zap-topo" target="_blank" rel="noopener">Contato</a>
 </div></header>
 
 <main id="inicio">
-  <section class="usina"><div class="wrap">
+  <section class="abertura"><div class="wrap">
     <div>
-      <p class="rotulo">Energia solar compartilhada · Ceará</p>
-      <h1>Uma parte da usina é sua. <span>O seu telhado continua igual.</span></h1>
-      <p class="sub">Você não instala nada. A usina gera, a distribuidora entrega e o desconto aparece na sua conta de luz todo mês.</p>
+      <p class="sobre">Geração compartilhada · Ceará</p>
+      <h1>Energia solar para a sua casa ou empresa, <b>sem instalar nenhuma placa.</b></h1>
+      <p class="intro">Você passa a usar parte da energia gerada na nossa usina em Russas. A distribuidora registra os créditos na sua conta de luz e você paga menos pela mesma energia de sempre.</p>
+      <dl class="fatos">
+        <div><dt>Desconto</dt><dd>18% na energia compensada</dd></div>
+        <div><dt>Adesão</dt><dd>Sem taxa e sem obra</dd></div>
+        <div><dt>Cancelamento</dt><dd>Aviso de 90 dias, sem multa</dd></div>
+      </dl>
+      <div class="acoes"><a class="bt bt-claro" href="#simular">Simular minha economia</a><a class="bt" href="#funcionamento">Como funciona</a></div>
     </div>
-    <div>
+
+    <div id="simular">
       <figure class="planta">
-        <svg id="placas" viewBox="0 0 345 281" role="img" aria-labelledby="placas-desc"><desc id="placas-desc">Vista de cima de uma fileira da usina. As placas amarelas são as que geram a energia da sua conta.</desc></svg>
-        <figcaption><span>Usina Jaguaribe I · Russas (CE)</span><span>vista de cima · 72 de 2.460 placas</span></figcaption>
+        <div class="planta-cab"><span><b>Usina Jaguaribe I</b> · Russas (CE)</span><span>4°56′ S · 37°58′ O</span></div>
+        <svg id="placas" viewBox="0 0 350 330" role="img" aria-labelledby="placas-desc">
+          <desc id="placas-desc">Vista aérea de um trecho da usina com 72 módulos solares em três mesas. Os módulos destacados em dourado são os que geram a energia da sua cota.</desc>
+          <defs>
+            <filter id="solo" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="3" seed="7" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 .19  0 0 0 0 .17  0 0 0 0 .14  0 0 0 .55 0"/><feComposite in2="SourceGraphic" operator="over"/></filter>
+            <filter id="sombra" x="-10%" y="-10%" width="130%" height="140%"><feGaussianBlur stdDeviation="2.2"/></filter>
+            <linearGradient id="vidro" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1D2B42"/><stop offset=".55" stop-color="#121B2A"/><stop offset="1" stop-color="#0C121C"/></linearGradient>
+            <linearGradient id="reflexo" x1="0" y1="0" x2="1" y2="1"><stop offset=".25" stop-color="#fff" stop-opacity="0"/><stop offset=".42" stop-color="#fff" stop-opacity=".07"/><stop offset=".5" stop-color="#fff" stop-opacity=".02"/><stop offset=".62" stop-color="#fff" stop-opacity=".06"/><stop offset=".8" stop-color="#fff" stop-opacity="0"/></linearGradient>
+          </defs>
+          <rect width="350" height="330" fill="#2A2621" filter="url(#solo)"/>
+        </svg>
+        <div class="legenda"><span><i class="sua"></i>Módulos da sua cota</span><span><i></i>Demais módulos · trecho de 72 de 2.460</span></div>
       </figure>
-      <div class="controle">
-        <label for="conta">Quanto vem sua conta de luz por mês?</label>
-        <div class="linha-valor"><span class="rs">R$</span><input id="conta" type="number" inputmode="decimal" min="80" max="20000" step="10" value="380"></div>
-        <input id="faixa" type="range" min="100" max="4000" step="10" value="380" aria-label="Valor da conta de luz">
-        <p class="leitura" id="leitura" aria-live="polite"></p>
-        <a class="bt bt-sol" id="zap-cota" target="_blank" rel="noopener">Quero minha parte da usina</a>
+
+      <div class="sim">
+        <label for="conta">Valor médio da sua conta de luz</label>
+        <div class="campo"><span>R$</span><input id="conta" type="number" inputmode="decimal" min="80" max="20000" step="10" value="380"></div>
+        <input id="faixa" type="range" min="100" max="4000" step="10" value="380" aria-label="Valor médio da conta de luz">
+        <dl class="resultado" aria-live="polite">
+          <div><dt>Sua cota na usina</dt><dd id="r-cota"></dd></div>
+          <div><dt>Energia compensada</dt><dd id="r-kwh"></dd></div>
+          <div class="forte"><dt>Economia estimada</dt><dd id="r-mes"></dd></div>
+          <div><dt>Em 12 meses</dt><dd id="r-ano"></dd></div>
+        </dl>
+        <p class="obs" id="r-obs"></p>
+        <a class="bt bt-claro" id="zap-cota" target="_blank" rel="noopener">Receber proposta pelo WhatsApp</a>
       </div>
     </div>
   </div></section>
 
-  <section class="secao" id="caminho"><div class="wrap">
-    <h2>O caminho da energia, da usina até a sua tomada</h2>
-    <p class="lead">A usina fica a 160 km de Fortaleza, mas a energia não precisa chegar por um fio próprio. Ela entra na rede da distribuidora e vira crédito na sua conta.</p>
-    <ol class="caminho">
-      <li><span class="no"><svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="4" fill="#FFC83D"/></svg></span><b>A usina gera</b><small>Russas (CE) · 1,5 MWp</small><p>As placas geram energia durante o dia e injetam tudo na rede da distribuidora.</p></li>
-      <li><span class="no"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13 8 3l5 10M5 9h6" stroke="#FFC83D" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></span><b>A distribuidora registra</b><small>rede elétrica do Ceará</small><p>A energia injetada é dividida entre os participantes, na proporção da cota de cada um.</p></li>
-      <li><span class="no"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8 8 3.5 13 8v5H3z" fill="#FFC83D"/></svg></span><b>O crédito chega na sua conta</b><small>sua casa ou empresa</small><p>Na fatura aparece como energia compensada. Você paga a taxa mínima à distribuidora e a energia a nós, com desconto.</p></li>
+  <section class="secao" id="funcionamento"><div class="wrap">
+    <div class="cab-sec">
+      <p class="sobre">Funcionamento</p>
+      <h2>A energia é gerada a 160 km de Fortaleza e compensada na sua conta.</h2>
+      <p>Não existe ligação física entre a usina e o seu imóvel. A usina injeta energia na rede da distribuidora, que divide os créditos entre os participantes do consórcio.</p>
+    </div>
+    <ol class="fluxo">
+      <li><span class="onde">Russas (CE)</span><b>A usina injeta energia na rede</b><p>Os 2.460 módulos geram durante o dia e toda a produção vai para a rede da distribuidora.</p></li>
+      <li><span class="onde">Distribuidora</span><b>Os créditos são divididos</b><p>A cada mês, a energia injetada é repartida entre os consorciados, na proporção da cota de cada um.</p></li>
+      <li><span class="onde">Sua unidade consumidora</span><b>O crédito abate o seu consumo</b><p>Na fatura, aparece como energia compensada. Você paga à distribuidora a taxa mínima e a iluminação pública, e à Jaguaribe a energia, com desconto.</p></li>
     </ol>
   </div></section>
 
   <section class="secao" id="economia"><div class="wrap">
-    <h2>Quanto você deixa de pagar em um ano</h2>
-    <p class="lead">Exemplos com contas comuns em Fortaleza. O desconto é de 18% sobre a energia compensada, sem custo de adesão.</p>
+    <div class="cab-sec">
+      <p class="sobre">Economia</p>
+      <h2>Quanto se deixa de pagar em um ano</h2>
+      <p>Exemplos com contas típicas de Fortaleza, considerando 18% de desconto sobre a energia compensada.</p>
+    </div>
     <div class="tabela"><table>
-      <thead><tr><th>Perfil</th><th class="n">Conta hoje</th><th class="n">Economia por ano</th></tr></thead>
+      <thead><tr><th>Perfil</th><th class="n">Conta média</th><th class="n">Economia anual</th></tr></thead>
       <tbody id="perfis"></tbody>
     </table></div>
-    <p class="nota">Tarifa média de R$ 0,98 por kWh, com impostos. A taxa mínima e a iluminação pública continuam sendo pagas à distribuidora.</p>
+    <p class="nota">Tarifa média de R$ 0,98 por kWh com tributos. A proposta final considera o histórico de 12 meses de cada unidade consumidora.</p>
   </div></section>
 
-  <section class="secao" id="geracao"><div class="wrap">
-    <h2>A usina gera o ano inteiro</h2>
-    <p class="lead">Entre fevereiro e maio chove mais e a geração cai. O que sobra nos meses de sol forte fica guardado como crédito por até 60 meses e cobre essa diferença.</p>
+  <section class="secao" id="usina"><div class="wrap">
+    <div class="cab-sec">
+      <p class="sobre">A usina</p>
+      <h2>Usina Jaguaribe I</h2>
+      <p>O Vale do Jaguaribe tem uma das maiores incidências de sol do país. Entre fevereiro e maio a geração cai com as chuvas. O excedente dos meses secos fica guardado como crédito por até 60 meses.</p>
+    </div>
+    <dl class="ficha">
+      <div><dt>Localização</dt><dd>Russas (CE)</dd></div>
+      <div><dt>Potência instalada</dt><dd>1,5 MWp</dd></div>
+      <div><dt>Módulos</dt><dd>2.460 × 610 Wp bifaciais</dd></div>
+      <div><dt>Estrutura</dt><dd>Fixa, inclinação de 10°</dd></div>
+      <div><dt>Início da operação</dt><dd>Março de 2025</dd></div>
+      <div><dt>Geração anual estimada</dt><dd id="f-total"></dd></div>
+    </dl>
     <figure class="grafico" id="grafico">
-      <h3>Geração estimada da Usina Jaguaribe I</h3>
-      <p class="unid">MWh por mês · 1,5 MWp</p>
-      <svg id="barras" viewBox="0 0 340 220" role="img" aria-label="Geração mensal estimada, de 139 MWh em abril a 227 MWh em outubro"></svg>
+      <h3>Geração mensal estimada</h3>
+      <p class="unid">MWh por mês</p>
+      <svg id="barras" viewBox="0 0 340 220" role="img" aria-label="Geração mensal estimada da usina"></svg>
       <div class="dica" id="dica" hidden></div>
-      <details><summary>Ver os números em tabela</summary><div style="overflow-x:auto"><table id="tab-geracao"></table></div></details>
+      <details><summary>Ver valores em tabela</summary><div style="overflow-x:auto"><table id="tab-geracao"></table></div></details>
     </figure>
   </div></section>
 
-  <section class="secao" id="aderir"><div class="wrap">
-    <h2>Para aderir, basta a sua conta de luz</h2>
+  <section class="secao" id="adesao"><div class="wrap">
+    <div class="cab-sec">
+      <p class="sobre">Adesão</p>
+      <h2>Para aderir, basta uma conta de luz recente</h2>
+    </div>
     <div class="adesao">
       <ol class="passos">
-        <li><b>Mande uma foto da conta</b><p>Pelo WhatsApp. Calculamos sua cota com base no consumo dos últimos 12 meses.</p></li>
-        <li><b>Assine o termo de adesão</b><p>Pelo celular, em poucos minutos. Não tem taxa de entrada nem fidelidade.</p></li>
-        <li><b>Espere o primeiro crédito</b><p>A distribuidora leva de 30 a 90 dias para incluir sua conta. Até lá, nada muda.</p></li>
+        <li><b>Envio da conta</b><p>Pelo WhatsApp ou e-mail. Calculamos a cota a partir do consumo dos últimos 12 meses.</p></li>
+        <li><b>Termo de adesão ao consórcio</b><p>Assinatura digital. Não há taxa de adesão nem fidelidade.</p></li>
+        <li><b>Cadastro na distribuidora</b><p>Solicitamos a inclusão da sua unidade no rateio. O prazo é de 30 a 90 dias, conforme o ciclo de leitura.</p></li>
+        <li><b>Primeira fatura com créditos</b><p>A partir daí, você recebe a conta da distribuidora e o boleto da Jaguaribe, com vencimento na data que escolher.</p></li>
       </ol>
       <div class="docs">
-        <h3>O que você precisa</h3>
-        <ul><li>Uma conta de luz recente</li><li>CPF ou CNPJ do titular da conta</li><li>Um e-mail para receber o boleto</li></ul>
-        <p>A conta precisa estar em baixa tensão (casas, apartamentos, comércios e escritórios) e na área atendida pela distribuidora do Ceará.</p>
+        <h3>Documentos</h3>
+        <ul><li>Conta de luz recente</li><li>CPF ou CNPJ do titular</li><li>E-mail para envio do boleto</li></ul>
+        <p>Atendemos unidades em baixa tensão (residências, comércios e escritórios) na área de concessão da distribuidora do Ceará.</p>
       </div>
     </div>
   </div></section>
 
   <section class="secao" id="duvidas"><div class="wrap">
-    <h2>Dúvidas frequentes</h2>
+    <div class="cab-sec"><p class="sobre">Dúvidas</p><h2>Perguntas frequentes</h2></div>
     <div class="faq">
-      <details><summary>O que é energia solar compartilhada?</summary><p>É um modelo previsto na Lei 14.300/2022: várias pessoas participam de uma mesma usina e cada uma recebe, na própria conta de luz, os créditos da sua parte da geração.</p></details>
-      <details><summary>Eu viro dono da usina?</summary><p>Você passa a participar do consórcio que usa a energia da usina, com uma cota do tamanho do seu consumo. A operação, a limpeza e a manutenção das placas são por nossa conta.</p></details>
-      <details><summary>A energia fica mais fraca ou falta luz?</summary><p>Não. A energia que chega na sua casa é a mesma de sempre, pela mesma rede. A diferença está só na conta.</p></details>
-      <details><summary>E se eu gastar mais do que a minha cota?</summary><p>O que passar da cota é cobrado normalmente pela distribuidora. Se o seu consumo aumentar de vez, ajustamos a cota sem custo.</p></details>
-      <details><summary>Posso sair quando quiser?</summary><p>Pode. Basta avisar com 90 dias, que é o prazo da distribuidora para retirar sua conta da divisão da usina. Não há multa.</p></details>
+      <details><summary>O que é geração compartilhada?</summary><p>É a modalidade prevista na Lei 14.300/2022 e regulamentada pela ANEEL em que consumidores se reúnem em consórcio ou cooperativa para usar a energia de uma mesma usina. Cada um recebe na própria conta os créditos da sua parte.</p></details>
+      <details><summary>Preciso fazer alguma instalação?</summary><p>Não. Não há equipamento, obra ou visita técnica. O medidor e a fiação continuam os mesmos.</p></details>
+      <details><summary>A qualidade da energia muda?</summary><p>Não. A energia continua sendo entregue pela distribuidora, pela mesma rede. A mudança é apenas na forma de cobrança.</p></details>
+      <details><summary>O que acontece se eu consumir mais do que a minha cota?</summary><p>O consumo que passar da cota é cobrado normalmente pela distribuidora. Se o aumento for permanente, a cota é ajustada sem custo.</p></details>
+      <details><summary>Como faço para cancelar?</summary><p>Basta comunicar com 90 dias de antecedência, prazo necessário para a distribuidora retirar a unidade do rateio. Não há multa.</p></details>
     </div>
   </div></section>
 </main>
 
 <footer class="rodape"><div class="wrap">
-  <h2>Descubra o tamanho da sua parte da usina.</h2>
-  <dl>
-    <div><dt>WhatsApp</dt><dd class="mono">(85) 90000-0000</dd><a class="bt bt-sol" id="zap-rodape" target="_blank" rel="noopener">Mandar minha conta</a></div>
+  <div class="cab-sec"><p class="sobre">Contato</p><h2>Envie sua conta e receba a proposta em até um dia útil.</h2></div>
+  <dl class="grade">
+    <div><dt>WhatsApp</dt><dd class="mono">(85) 90000-0000</dd><a class="bt bt-claro" id="zap-rodape" target="_blank" rel="noopener">Enviar minha conta</a></div>
     <div><dt>Escritório</dt><dd>Rua Tibúrcio Cavalcante, 1500, sala 704<br>Meireles, Fortaleza (CE)</dd></div>
     <div><dt>Atendimento</dt><dd>Segunda a sexta, das 8h às 18h</dd></div>
   </dl>
-  <p class="fim">Jaguaribe Energia · energia solar compartilhada no Ceará</p>
+  <p class="legal">Jaguaribe Energia Compartilhada · CNPJ 00.000.000/0001-00 (fictício)<br>Geração distribuída compartilhada conforme Lei 14.300/2022 e regras da ANEEL.</p>
 </div></footer>
 
 <script>
 // ===== Números usados na simulação (a empresa ajusta aqui) =====
 const ZAP = "5585900000000";     // número fictício
-const TARIFA = 0.98;             // R$ por kWh, com impostos (média)
+const TARIFA = 0.98;             // R$ por kWh, com tributos (média)
 const DESCONTO = 0.18;           // desconto sobre a energia compensada
 const FIXO_MIN = 58;             // taxa mínima + iluminação pública (R$)
 const FIXO_PCT = 0.13;           // parte da conta que não é compensada, em contas maiores
-const KWH_POR_PLACA = 80;        // placa de 610 W em Russas: ~80 kWh por mês
+const KWP_MODULO = 0.61;
+const KWH_POR_MODULO = 80;       // módulo de 610 Wp em Russas: ~80 kWh por mês
 const USINA_MWP = 1.5;
-// geração relativa por mês no Vale do Jaguaribe (horas de sol pleno por dia)
-const HSP = [5.7,5.4,4.9,4.6,5.0,5.3,5.8,6.3,6.6,6.6,6.5,6.1];
+const HSP = [5.7,5.4,4.9,4.6,5.0,5.3,5.8,6.3,6.6,6.6,6.5,6.1]; // horas de sol pleno por dia
 const MESES = ["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"];
 const DIAS = [31,28,31,30,31,30,31,31,30,31,30,31];
 // ===============================================================
@@ -282,41 +345,60 @@ const DIAS = [31,28,31,30,31,30,31,31,30,31,30,31];
 const $ = id => document.getElementById(id);
 const brl = v => v.toLocaleString("pt-BR", {style:"currency", currency:"BRL"});
 const n0 = v => Math.round(v).toLocaleString("pt-BR");
+const n2 = v => v.toLocaleString("pt-BR", {minimumFractionDigits:2, maximumFractionDigits:2});
 const zap = t => `https://wa.me/${ZAP}?text=${encodeURIComponent(t)}`;
 const NS = "http://www.w3.org/2000/svg";
+const el = (tag, at) => { const e = document.createElementNS(NS, tag); for (const k in at) e.setAttribute(k, at[k]); return e; };
 
 function calcular(conta){
   const fixo = Math.min(conta, Math.max(FIXO_MIN, conta * FIXO_PCT));
   const energia = conta - fixo, kwh = energia / TARIFA;
-  return {economia: energia * DESCONTO, kwh, placas: Math.max(1, Math.ceil(kwh / KWH_POR_PLACA))};
+  return {economia: energia * DESCONTO, kwh, modulos: Math.max(1, Math.ceil(kwh / KWH_POR_MODULO))};
 }
 
-// ---- a fileira da usina: 3 mesas com 2 linhas de 12 placas ----
-const COLS = 12, MESAS = 3, W = 26, H = 40, G = 3, GM = 16;
-const svg = $("placas"), mods = [];
-for (let m = 0; m < MESAS; m++) for (let r = 0; r < 2; r++) for (let c = 0; c < COLS; c++) {
-  const x = c * (W + G), y = m * (2 * H + G + GM) + r * (H + G);
-  const g = document.createElementNS(NS, "g");
-  const rect = document.createElementNS(NS, "rect");
-  Object.entries({x, y, width: W, height: H, rx: 1.5, class: "mod"}).forEach(([k, v]) => rect.setAttribute(k, v));
-  const cel = document.createElementNS(NS, "path");
-  let d = `M${x + W/2} ${y}V${y + H}`;
-  for (let i = 1; i < 6; i++) d += `M${x} ${y + i * H / 6}H${x + W}`;
-  cel.setAttribute("d", d); cel.setAttribute("class", "cel");
-  g.append(rect, cel); svg.append(g); mods.push(rect);
+// ---- trecho da usina: 3 mesas, 2 linhas de 12 módulos (6 × 12 células cada) ----
+const COLS = 12, MESAS = 3, W = 26, H = 44, G = 2, CORREDOR = 22, MX = 8, MY = 8;
+const svg = $("placas"), selecoes = [];
+for (let m = 0; m < MESAS; m++) {
+  const y0 = MY + m * (2 * H + G + CORREDOR), largMesa = COLS * W + (COLS - 1) * G, altMesa = 2 * H + G;
+  // sombra da mesa no chão (sol da manhã, projetada para baixo e à direita)
+  svg.append(el("rect", {x: MX + 3, y: y0 + 7, width: largMesa, height: altMesa, fill: "#000", opacity: .5, filter: "url(#sombra)"}));
+  // estrutura metálica aparente entre as linhas
+  svg.append(el("rect", {x: MX - 1, y: y0 - 1, width: largMesa + 2, height: altMesa + 2, fill: "#5E656F", rx: .5}));
+  for (let r = 0; r < 2; r++) for (let c = 0; c < COLS; c++) {
+    const x = MX + c * (W + G), y = y0 + r * (H + G);
+    svg.append(el("rect", {x, y, width: W, height: H, fill: "#9AA3AE"}));                       // moldura de alumínio
+    svg.append(el("rect", {x: x + .9, y: y + .9, width: W - 1.8, height: H - 1.8, fill: "url(#vidro)"})); // vidro
+    let d = "";
+    const cx = x + .9, cy = y + .9, cw = (W - 1.8) / 6, ch = (H - 1.8) / 12;
+    for (let i = 1; i < 6; i++) d += `M${cx + i * cw} ${cy}V${cy + H - 1.8}`;
+    for (let j = 1; j < 12; j++) d += `M${cx} ${cy + j * ch}H${cx + W - 1.8}`;
+    svg.append(el("path", {d, stroke: "#2B3950", "stroke-width": .45, fill: "none"}));             // células
+    svg.append(el("path", {d: `M${cx} ${cy + (H - 1.8) / 2}H${cx + W - 1.8}`, stroke: "#07090D", "stroke-width": .8})); // divisão half-cut
+    const s = el("rect", {x: x + .5, y: y + .5, width: W - 1, height: H - 1, class: "mod-sel"});
+    svg.append(s); selecoes.push(s);
+  }
 }
+// reflexo do céu sobre o vidro, por cima de tudo
+svg.append(el("rect", {x: 0, y: 0, width: 350, height: 330, fill: "url(#reflexo)", "pointer-events": "none"}));
 
 function atualizar(valor, origem){
   const v = Number(valor);
   if (!isFinite(v) || v <= 0) return;
   if (origem !== "campo") $("conta").value = Math.round(v);
   if (origem !== "faixa") $("faixa").value = Math.min(4000, Math.max(100, v));
-  const r = calcular(v), acesas = Math.min(r.placas, mods.length);
-  mods.forEach((m, i) => m.classList.toggle("sua", i < acesas));
-  $("leitura").innerHTML = `<b>${r.placas} ${r.placas > 1 ? "placas" : "placa"}</b> da usina passam a gerar a sua energia: cerca de <b>${n0(r.kwh)} kWh</b> por mês e <b>${brl(r.economia)}</b> a menos na conta, todo mês.`
-    + (r.placas > mods.length ? `<span class="extra">As outras ${r.placas - mods.length} placas ficam nas fileiras ao lado.</span>` : "")
-    + (v < 150 ? `<span class="extra">Com conta abaixo de R$ 150 o desconto fica pequeno, mas vale conferir o histórico.</span>` : "");
-  $("zap-cota").href = zap(`Olá! Minha conta de luz vem em torno de ${brl(v)}. Quero saber qual seria minha parte da usina.`);
+  const r = calcular(v);
+  selecoes.forEach((s, i) => s.classList.toggle("sua", i < r.modulos));
+  $("r-cota").textContent = `${r.modulos} ${r.modulos > 1 ? "módulos" : "módulo"} · ${n2(r.modulos * KWP_MODULO)} kWp`;
+  $("r-kwh").textContent = `≈ ${n0(r.kwh)} kWh/mês`;
+  $("r-mes").textContent = `${brl(r.economia)}/mês`;
+  $("r-ano").textContent = brl(r.economia * 12);
+  const obs = [];
+  if (r.modulos > selecoes.length) obs.push(`${r.modulos - selecoes.length} módulos da sua cota ficam em outras mesas da usina.`);
+  if (v < 150) obs.push("Para contas abaixo de R$ 150, a economia é pequena. Vale analisar o histórico antes.");
+  obs.push("Estimativa. A proposta considera o histórico de 12 meses.");
+  $("r-obs").textContent = obs.join(" ");
+  $("zap-cota").href = zap(`Olá! Minha conta de luz é de aproximadamente ${brl(v)} por mês. Gostaria de receber uma proposta de energia compartilhada.`);
 }
 $("conta").addEventListener("input", e => atualizar(e.target.value, "campo"));
 $("conta").addEventListener("blur", e => { if (!(Number(e.target.value) > 0)) atualizar(380); });
@@ -325,49 +407,47 @@ atualizar(380);
 
 // ---- tabela de perfis ----
 $("perfis").innerHTML = [
-  ["Apartamento de 2 quartos", 250], ["Casa com ar-condicionado", 520], ["Padaria de bairro", 1800], ["Clínica ou consultório", 3200]
-].map(([p, c]) => `<tr><td>${p}</td><td class="n">${brl(c)}</td><td class="n destaque">${brl(calcular(c).economia * 12)}</td></tr>`).join("");
+  ["Apartamento, 2 quartos", 250], ["Casa com ar-condicionado", 520], ["Padaria", 1800], ["Clínica médica", 3200]
+].map(([p, c]) => `<tr><td>${p}</td><td class="n">${brl(c)}</td><td class="n">${brl(calcular(c).economia * 12)}</td></tr>`).join("");
 
-// ---- gráfico de geração (uma série, sem legenda) ----
-// é redesenhado na largura real da tela para o texto não encolher no celular
+// ---- gráfico de geração: uma série, redesenhado na largura real ----
+const dados = HSP.map((h, i) => USINA_MWP * 1000 * h * DIAS[i] * 0.78 / 1000);
+$("f-total").textContent = `${n0(dados.reduce((a, b) => a + b, 0))} MWh`;
 function desenharGrafico(){
-  const dados = HSP.map((h, i) => USINA_MWP * 1000 * h * DIAS[i] * 0.78 / 1000);
   const g = $("barras");
-  const Wv = Math.max(280, Math.round(g.parentElement.clientWidth - 28)), Hv = Wv < 500 ? 220 : 260, esq = 30, dir = 4, topo = 12, base = 24;
+  const Wv = Math.max(280, Math.round(g.parentElement.clientWidth - 28)), Hv = Wv < 500 ? 210 : 250, esq = 30, dir = 4, topo = 10, base = 24;
   g.setAttribute("viewBox", `0 0 ${Wv} ${Hv}`);
   const maxY = 250, ticks = [0, 50, 100, 150, 200, 250];
-  const larg = (Wv - esq - dir) / 12, folga = Math.min(10, larg * 0.28), bw = larg - folga;
+  const larg = (Wv - esq - dir) / 12, folga = Math.min(12, larg * .3), bw = larg - folga;
   const y = v => topo + (Hv - topo - base) * (1 - v / maxY);
   let h = ticks.map(t => `<line class="grade" x1="${esq}" x2="${Wv - dir}" y1="${y(t)}" y2="${y(t)}"/><text class="eixo" x="${esq - 6}" y="${y(t) + 4}" text-anchor="end">${t}</text>`).join("");
   dados.forEach((v, i) => {
-    const x = esq + i * larg + folga / 2, yt = y(v), hb = y(0) - yt, r = 4;
-    // barra com topo arredondado (4px) e base reta
-    const path = `M${x} ${y(0)}V${yt + r}Q${x} ${yt} ${x + r} ${yt}H${x + bw - r}Q${x + bw} ${yt} ${x + bw} ${yt + r}V${y(0)}Z`;
-    h += `<g data-i="${i}"><rect class="alvo" x="${esq + i * larg}" y="${topo}" width="${larg}" height="${Hv - topo - base}"/><path class="barra" d="${path}"/></g>`;
-    h += `<text class="eixo" x="${x + bw / 2}" y="${Hv - 8}" text-anchor="middle">${MESES[i]}</text>`;
+    const x = esq + i * larg + folga / 2, yt = y(v), r = 3;
+    const d = `M${x} ${y(0)}V${yt + r}Q${x} ${yt} ${x + r} ${yt}H${x + bw - r}Q${x + bw} ${yt} ${x + bw} ${yt + r}V${y(0)}Z`;
+    h += `<g data-i="${i}"><rect class="alvo" x="${esq + i * larg}" y="${topo}" width="${larg}" height="${Hv - topo - base}"/><path class="barra" d="${d}"/></g>`;
+    h += `<text class="eixo" x="${x + bw / 2}" y="${Hv - 7}" text-anchor="middle">${MESES[i]}</text>`;
   });
   g.innerHTML = h;
+  g.setAttribute("aria-label", `Geração mensal estimada: mínima em abril, ${n0(dados[3])} MWh; máxima em setembro e outubro, ${n0(dados[9])} MWh.`);
   const dica = $("dica"), box = $("grafico");
-  g.querySelectorAll("g[data-i]").forEach(el => {
-    const i = +el.dataset.i;
+  g.querySelectorAll("g[data-i]").forEach(gr => {
+    const i = +gr.dataset.i;
     const mostrar = () => {
-      g.querySelectorAll(".ativo").forEach(a => a.classList.remove("ativo")); el.classList.add("ativo");
-      const b = el.querySelector(".barra").getBoundingClientRect(), fb = box.getBoundingClientRect();
+      g.querySelectorAll(".ativo").forEach(a => a.classList.remove("ativo")); gr.classList.add("ativo");
+      const b = gr.querySelector(".barra").getBoundingClientRect(), fb = box.getBoundingClientRect();
       dica.textContent = `${MESES[i]} · ${n0(dados[i])} MWh`; dica.hidden = false;
-      dica.style.left = Math.min(fb.width - 60, Math.max(60, b.left - fb.left + b.width / 2)) + "px";
+      dica.style.left = Math.min(fb.width - 56, Math.max(56, b.left - fb.left + b.width / 2)) + "px";
       dica.style.top = (b.top - fb.top) + "px";
     };
-    el.addEventListener("pointerenter", mostrar); el.addEventListener("click", mostrar);
+    gr.addEventListener("pointerenter", mostrar); gr.addEventListener("click", mostrar);
   });
   g.addEventListener("pointerleave", () => { dica.hidden = true; g.querySelectorAll(".ativo").forEach(a => a.classList.remove("ativo")); });
-  $("tab-geracao").innerHTML = `<thead><tr>${MESES.map(m => `<th class="n">${m}</th>`).join("")}</tr></thead><tbody><tr>${dados.map(v => `<td class="n">${n0(v)}</td>`).join("")}</tr></tbody>`;
-  const total = dados.reduce((a, b) => a + b, 0);
-  g.setAttribute("aria-label", `Geração mensal estimada: menor em abril, ${n0(dados[3])} MWh; maior em setembro e outubro, ${n0(dados[9])} MWh. Total no ano: ${n0(total)} MWh.`);
 }
 desenharGrafico();
 let tg; addEventListener("resize", () => { clearTimeout(tg); tg = setTimeout(desenharGrafico, 150); });
+$("tab-geracao").innerHTML = `<thead><tr>${MESES.map(m => `<th class="n">${m}</th>`).join("")}</tr></thead><tbody><tr>${dados.map(v => `<td class="n">${n0(v)}</td>`).join("")}</tr></tbody>`;
 
-const msg = "Olá! Vi o site da Jaguaribe e queria saber como funciona a energia solar compartilhada.";
+const msg = "Olá! Vi o site da Jaguaribe Energia e gostaria de entender como funciona a energia compartilhada.";
 $("zap-topo").href = zap(msg);
 $("zap-rodape").href = zap(msg);
 </script>
